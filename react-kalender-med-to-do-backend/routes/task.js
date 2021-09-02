@@ -15,6 +15,7 @@ router.get('/', function(req, res, next) {
     }
 
     printTasks += "</ul></div"
+    console.log("printTasks", printTasks);
 
     res.send([printTasks])
     
