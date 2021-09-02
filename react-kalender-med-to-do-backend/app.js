@@ -5,6 +5,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var taskRouter = require('./routes/task');
+
 
 var app = express();
 
@@ -16,9 +18,10 @@ MongoClient.connect("mongodb+srv://emmahammar:Hejhej123!@taskinfo.uvgzw.mongodb.
 .then(client => {
     console.log("Vi är uppkopplade mot db");
 
-    const db = client.db("TaskInfo");
+    const db = client.db("taskInfoDb");
     app.locals.db = db;
 });
+
 
 
 app.use(logger('dev'));
@@ -29,9 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/task', taskRouter);
 
-app.get('/books', function(req, res) {
-    res.send("hej till books routern")
-});
 
 module.exports = app;
