@@ -27,6 +27,7 @@ router.get('/', function(req, res, next) {
 router.post('/add', function(req, res) {
   //this router saves new task into MongoDB
 
+
   //hämta?
   let newTask = 
   {
@@ -34,6 +35,8 @@ router.post('/add', function(req, res) {
     title: req.body.title,
     isFinish: false
   };
+  console.log("newTask:", newTask);
+
 
   req.app.locals.db.collection("taskInfoCollection").insertOne(newTask)
   .then(result => {
