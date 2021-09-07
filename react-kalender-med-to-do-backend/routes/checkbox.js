@@ -10,8 +10,9 @@ router.post('/', function(req, res) {
   console.log("req.body.isFinish", req.body.isFinish);
 
   //INGET HÄNDER -VARFÖR??
-  req.app.locals.db.collection("taskInfoCollection").updateOne( {"id" : req.body.id}, {$set: {"isFinish" : req.body.isFinish} })
+  req.app.locals.db.collection("taskInfoCollection").updateOne( {_id : req.body.id}, {$set: {isFinish : req.body.isFinish} })
   .then(result => {
+    console.log("result", result);
     res.json( {"code": "updateTask", "updateTaskId": req.body.id} );
   });
   // res.json( {"code": "updateTask"} );
