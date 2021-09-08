@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     .then(results => {
       console.log("masterResults", results);
   
-      res.send([results])
+      res.send(results)
       
     });
   });
