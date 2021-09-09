@@ -4,7 +4,6 @@ const cors = require('cors');
 
 router.use(cors());
 
-
 router.post('/', function(req, res) {
   //this router saves new task into MongoDB
 
