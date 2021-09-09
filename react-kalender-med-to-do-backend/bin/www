@@ -13,9 +13,16 @@ var http = require('http');
  */
 
 // var port = normalizePort(process.env.PORT || '0.0.0.0');
+<<<<<<< HEAD
 // var port = normalizePort(process.env.PORT || 80); //Herokus default for http o 443 for https?
 var port = normalizePort(process.env.PORT || 443); //Herokus default for http o 443 for https?
 
+=======
+var port = normalizePort(process.env.PORT || '80'); //Herokus default for http o 443 for https?
+// app.listen(process.env.PORT, '0.0.0.0', function(err) {
+//   console.log("Started listening on %s", app.url);
+// });
+>>>>>>> copy
 
 // var port = normalizePort(process.env.PORT || '3012'); //locally testing
 
