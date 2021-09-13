@@ -1,0 +1,42 @@
+/* black: #333 */
+
+header {
+
+}
+
+#logoWrapper {
+    font-size: 1.4rem;
+}
+
+#span-emma {
+    position: relative;
+}
+
+#span-hammar {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -60px;
+}
+
+#nav-ul {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.nav-li {
+    margin-top: 10px;
+    padding-right: 40px;
+    list-style: none;
+}
+
+.underline {
+    border-bottom: 1px solid #333;
+    background-color: red;
+    margin-top: 4px;
+}
+
+#underline-top {
+    margin-top: -10px;
+}
+
