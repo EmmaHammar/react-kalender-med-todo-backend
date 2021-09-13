@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var taskRouter = require('./routes/task');
+// var listRouter = require('./routes/list');
 var checkboxRouter = require('./routes/checkbox');
 var masterlistRouter = require('./routes/masterlist');
 
@@ -32,6 +33,7 @@ app.use('/', indexRouter);
 app.use('/masterlist', masterlistRouter);
 
 app.use('/task', taskRouter);
+// app.use('/list', listRouter);
 app.use('/checkbox', checkboxRouter);
 
 
