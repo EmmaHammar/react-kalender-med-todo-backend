@@ -5,10 +5,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var addRouter = require('./routes/add');
-// var checkboxRouter = require('./routes/checkbox');
 var masterlistRouter = require('./routes/masterlist');
 var deleteRouter = require('./routes/delete');
-
 
 var app = express();
 
@@ -32,14 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/masterlist', masterlistRouter);
-
 app.use('/add', addRouter);
-// app.use('/checkbox', checkboxRouter);
 app.use('/delete', deleteRouter);
-
-
-
-
-
 
 module.exports = app;
