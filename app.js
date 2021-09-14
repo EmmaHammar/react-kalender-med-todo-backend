@@ -4,8 +4,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var taskRouter = require('./routes/task');
-var checkboxRouter = require('./routes/checkbox');
+var addRouter = require('./routes/add');
+// var checkboxRouter = require('./routes/checkbox');
 var masterlistRouter = require('./routes/masterlist');
 var deleteRouter = require('./routes/delete');
 
@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/masterlist', masterlistRouter);
 
-app.use('/task', taskRouter);
-app.use('/checkbox', checkboxRouter);
+app.use('/add', addRouter);
+// app.use('/checkbox', checkboxRouter);
 app.use('/delete', deleteRouter);
 
 
