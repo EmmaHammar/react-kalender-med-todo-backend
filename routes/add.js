@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
   
   req.app.locals.db.collection("taskInfoCollection").insertOne(newTask)
   .then(result => {
-    res.json( {"saved newTask:" : newTask} );
+    res.json({"code:" : "newTask saved"});
   });
 
 });

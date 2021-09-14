@@ -10,7 +10,7 @@ router.post('/', function(req, res) {
   req.app.locals.db.collection("taskInfoCollection").deleteOne( {id : req.body.id} )
   .then(result => {
     // console.log("result", result);
-    res.json( {"deletedTaskId": req.body.id} );
+    res.json({"deletedTaskId": req.body.id});
   });
 
 });
