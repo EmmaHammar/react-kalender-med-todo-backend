@@ -7,6 +7,8 @@ var indexRouter = require('./routes/index');
 var taskRouter = require('./routes/task');
 var checkboxRouter = require('./routes/checkbox');
 var masterlistRouter = require('./routes/masterlist');
+var deleteRouter = require('./routes/delete');
+
 
 var app = express();
 
@@ -33,6 +35,9 @@ app.use('/masterlist', masterlistRouter);
 
 app.use('/task', taskRouter);
 app.use('/checkbox', checkboxRouter);
+app.use('/delete', deleteRouter);
+
+
 
 
 
